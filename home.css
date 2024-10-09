@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main: rgba(39, 55, 77, 0.7);
+  --bg: #dde6ed;
+  --button: #9db2bf;
+}
+
+body {
+  font-family: Verdana;
+  background-color: var(--bg);
+  overflow-x: hidden;
+  height: 2000px;
+  min-width: 270px;
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  padding: 1.4rem 7%;
+  background-color: var(--main);
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  position: fixed;
+  height: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: var(--button);
+}
+
+.navbar .logo span {
+  color: white;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  list-style: none;
+  width: 90%;
+  justify-content: right;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: grey;
+}
+
+.navbar .regis {
+  display: flex;
+  list-style: none;
+  background-color: #9db2bf;
+  border-radius: 25px;
+  margin: 0;
+  min-width: 7.9rem;
+}
+
+.navbar .regis a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0.5rem 1rem;
+}
+
+.navbar .regis a:hover {
+  color: grey;
+}
+
+/*hamburger menu*/
+.navbar .menu-toggle {
+  width: 18rem;
+  position: absolute;
+  right: 0;
+}
+.navbar .menu-toggle a {
+  color: white;
+  margin: 0 0.5rem;
+  display: inline-block;
+  font-size: 3rem;
+  text-decoration: none;
+}
+.navbar .menu-toggle a:hover {
+  color: grey;
+}
+.navbar .menu-toggle a#register2 {
+  font-size: 2rem;
+  background-color: #9db2bf;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+}
+
+#hamburger-menu,
+#register2 {
+  display: none;
+}
+
+/* Banner */
+.banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/gambar/gundam.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.banner .content {
+  padding: 1.4rem 6%;
+  max-width: 60rem;
+}
+
+.banner .content h1 {
+  font-size: 5em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h1 span {
+  color: var(--button);
+}
+
+.banner .content p {
+  font-size: 0.5;
+  margin-top: 2.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(103, 103, 168, 0.5);
+}
+
+/* Popular Brand */
+.menu,
+.item {
+  padding: 5px 7% 1.4rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.menu .popular {
+  display: block;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.menu .popular h2,
+.item .popular-item h2 {
+  text-align: center;
+  font-size: 2rem;
+  display: inline-block;
+  background-color: var(--button);
+  border-radius: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.menu .brand {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+
+div.menu-brand-img {
+  background-color: white;
+  border-radius: 18px;
+  width: 10rem;
+  height: auto;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+}
+.menu .brand .menu-brand-img .bandai-logo {
+  background-color: white;
+  width: 90%;
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.menu .brand .menu-brand-img .tamiya-logo {
+  background-color: white;
+  width: 100%;
+  margin: 1rem 0rem;
+  display: inline-block;
+}
+
+/* Popular Item */
+.item .row {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 2rem;
+}
+
+.item .row .menu-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  box-shadow: 0 0.5rdm 1rem rgba(39, 55, 77, 0.7);
+}
+
+.item .row .menu-card img {
+  height: 15rem;
+}
+
+.item .row .menu-card img:hover {
+  transform: scale(1.1);
+}
+
+.item .row .menu-card p {
+  padding: 1rem 0;
+  font-size: 14px;
+}
+
+.item .row .menu-card h3 {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ukuran laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+    display: inline-block;
+  }
+}
+
+/* ukuran tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  div.regis {
+    display: none !important;
+  }
+  #hamburger-menu,
+  #register2 {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 35%;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+    display: block;
+  }
+  .navbar .navbar-nav a {
+    color: var(--main);
+    display: block;
+    margin: 3rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+.footer {
+  background-color: #27374d;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin-top: 90px;
+}
+
+.footer .navbar-logo {
+  font-style: italic;
+}
+
+.footer .navbar-logo span {
+  color: gray;
+}
+
+.footer .footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer .footer-logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer .footer-social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.footer .footer-text {
+  margin-top: 20px;
+}

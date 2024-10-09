@@ -1,0 +1,141 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main: rgba(39, 55, 77, 0.7);
+  --bg: #dde6ed;
+  --button: #9db2bf;
+}
+
+body {
+  font-family: Verdana;
+  background: url(gambar/regis\ bg.jpg);
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  min-width: 270px;
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  padding: 1.4rem 7%;
+  background-color: var(--main);
+  justify-content: center;
+  color: white;
+  align-items: center;
+  position: fixed;
+  height: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: var(--button);
+}
+
+.navbar .logo span {
+  color: white;
+}
+
+/* CONTENT Register Page */
+
+#register-form {
+  background-color: transparent;
+  position: relative;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(39, 55, 77, 0.5);
+  padding: 2rem;
+  width: 400px;
+  height: 440px;
+  margin: 9rem auto 4rem auto;
+  text-align: center;
+  font-size: 10px;
+}
+
+#register-form input {
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 1rem;
+
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: none;
+}
+
+#register-form div#error p {
+  color: red;
+  font-weight: normal;
+}
+
+/* ukuran laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+    display: inline-block;
+  }
+}
+
+/* ukuran tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+.footer {
+  background-color: #27374d;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin-top: 90px;
+  height: 40rem;
+}
+
+.footer .navbar-logo {
+  font-style: italic;
+}
+
+.footer .navbar-logo span {
+  color: gray;
+}
+
+.footer .footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer .footer-logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer .footer-social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.footer .footer-text {
+  margin-top: 20px;
+}
